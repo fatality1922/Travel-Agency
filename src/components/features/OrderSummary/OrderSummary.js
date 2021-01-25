@@ -8,7 +8,9 @@
 // const OrderSummary = (tripCost, options) => (
 
 //   <h2 className={styles.component}> Total: <strong> 21,73</strong> </h2>
-//   // <h2 className={styles.component}> Total: <strong>  {formatPrice(calculateTotal(tripCost, options))}</strong> </h2> --psuje strone, poprawic trza
+  
+//   // <h2 className={styles.component}> Total: <strong>  {formatPrice(calculateTotal(tripCost, options))}</strong> </h2>// --psuje strone, poprawic trza
+  
 // );
 
 // OrderSummary.propTypes = {
