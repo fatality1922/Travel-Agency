@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import pricing from '../../../data/pricing.json';
 import OrderOption from '../OrderOption/OrderOption';
 
-const OrderForm = (tripCost, options, setOrderOption) => (
+const OrderForm = ({tripCost, options, setOrderOption}) => (
 
   <Grid>
     <Row>
@@ -30,6 +30,7 @@ const OrderForm = (tripCost, options, setOrderOption) => (
 OrderForm.propTypes = {
   tripCost: PropTypes.string,
   options: PropTypes.object,
+  setOrderOption: PropTypes.func,
 };
 
 export default OrderForm;
