@@ -19,11 +19,25 @@ describe('Component TripSummary', () => {
   it('has proper cost&days', () => {
     const expectedCost = 'koszt';
     const expectedDays = 17;
-    const component = shallow(<TripSummary  cost={expectedCost} days={expectedDays} />);
-    expect(component.find('.details span').first().text()).toEqual(`${expectedDays} days`);
-    expect(component.find('.details span').last().text()).toEqual(`from ${expectedCost}`);
+    const component = shallow(<TripSummary cost={expectedCost} days={expectedDays} />);
+    expect(component.find('.details span').at(0).text()).toEqual(`${expectedDays} days`);
+    expect(component.find('.details span').at(1).text()).toEqual(`from ${expectedCost}`);
   });
   it('should throw error when not every required prop is given', () => {
     expect(() => shallow(<TripSummary />)).toThrow();
+  });
+
+
+  it('should render array of tags', () => {
+    const expectedTags = ['books', 'films', 'kings'];
+    const component = shallow(<TripSummary tags={expectedTags} />);
+    expect(component.find('.tags span').at(0).text()).toEqual('books');
+    expect(component.find('.tags span').at(1).text()).toEqual('films');
+    expect(component.find('.tags span').at(2).text()).toEqual('kings');
+  });
+
+  it('shouldnt render div if there is no tags', () => {
+    const component = shallow(<TripSummary />);
+    expect(component.exists('.tags')).toBe(false);
   });
 });
