@@ -23,9 +23,7 @@ describe('Component TripSummary', () => {
     expect(component.find('.details span').at(0).text()).toEqual(`${expectedDays} days`);
     expect(component.find('.details span').at(1).text()).toEqual(`from ${expectedCost}`);
   });
-  it('should throw error when not every required prop is given', () => {
-    expect(() => shallow(<TripSummary />)).toThrow();
-  });
+
 
 
   it('should render array of tags', () => {
