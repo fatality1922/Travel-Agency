@@ -35,9 +35,8 @@ describe('Component TripSummary', () => {
     expect(component.find('.tags span').at(1).text()).toEqual('films');
     expect(component.find('.tags span').at(2).text()).toEqual('kings');
   });
-
   it('shouldnt render div if there is no tags', () => {
-    const component = shallow(<TripSummary />);
-    expect(component.exists('.tags')).toBe(false);
+    const component = shallow(<TripSummary  tags={[]} />);
+    expect(component.find('.tags')).toEqual(null || {});
   });
 });
