@@ -57,7 +57,8 @@
   {
     "id": "name",
     "name": "Your name",
-    "type": "text"
+    "type": "text",
+    "required": "true"
   },
   {
     "id": "contact",
